@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find-A-Friend</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6-sm">
+                <h1>Answer the questions below</h1>
+            </div>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="yourName">Name</label>
+                <input type="text" class="form-control" id="yourName" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="yourImage">Photo</label>
+                <input type="text" class="form-control" id="yourImage" placeholder="Provide a link to a photo of you">
+            </div>
+            <div class="form-group">
+                <h5>Question 1: </h5>
+                <label for="question1">How much do you agree with the following statement? Peanut Butter is delicious.</label>
+                <select class="form-control" id="question1">
+                  <option>1 - Strongly Disagree</option>
+                  <option>2 - Disagree</option>
+                  <option>3 - Meh</option>
+                  <option>4 - Agree</option>
+                  <option>5 - Strongly Agree</option>
+                </select>
+              </div>
+
+            <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-// array of friends 
+// array of friends
 var friendList = [
     {
         name: "Julie",

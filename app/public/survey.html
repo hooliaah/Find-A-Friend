@@ -156,10 +156,11 @@
                     <option>5 - Strongly Agree</option>
                 </select>
             </div>
-
+            <!-- submit button -->
             <button type="submit" class="btn btn-info" id="submitButton">Submit</button>
         </form>
 
+        <!-- modal content -->
         <div class="modal fade" id="results-modal" tabindex="-1" role="dialog" aria-labelledby="results" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -204,19 +205,20 @@
             };
             var currentURL = window.location.origin;
 
+            // AJAX post request to /api/friends route
             $.post(currentURL + "/api/friends", newFriendData, function (data) {
                 // reset name and image fields
                 $("#yourName").val("");
                 $("#yourImage").val("");
                 $(".question").val('default');
 
-                // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                // from the result, assign best match's name and photo
                 $("#match-name").text(data.name);
+                // not sure why the image isn't displayed on the modal...
                 $("#match-img").attr("src", data.photo);
 
-                // Show the modal with the best match
+                // show best match in the modal
                 $("#results-modal").modal("toggle");
-
             })
         });
 

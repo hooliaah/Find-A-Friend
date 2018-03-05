@@ -15,7 +15,6 @@ require('./app/routing/apiRoutes.js')(app);
 require('./app/routing/htmlRoutes.js')(app);
 
 // begin listening on server
-app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
-  
+app.listen(PORT, function () {
+  console.log("App listening on PORT " + PORT);
+});

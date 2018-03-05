@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Find-A-Friend</title>
-    <!-- Link to Bootstrap -->
+    <!-- Link to Bootstrap CSS and JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <!-- Link to jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -35,7 +39,7 @@
             <div class="form-group">
                 <h5>Question 1: </h5>
                 <label for="question1">How much do you agree with the following statement? Peanut Butter is delicious.</label>
-                <select class="form-control" id="question1">
+                <select class="form-control question" id="question1">
                     <option>1 - Strongly Disagree</option>
                     <option>2 - Disagree</option>
                     <option>3 - Meh</option>
@@ -47,7 +51,7 @@
             <div class="form-group">
                 <h5>Question 2: </h5>
                 <label for="question2">How much do you like going out to the movies?</label>
-                <select class="form-control" id="question2">
+                <select class="form-control question" id="question2">
                     <option>1 - Strongly Dislike</option>
                     <option>2 - Dislike</option>
                     <option>3 - Meh</option>
@@ -59,7 +63,7 @@
             <div class="form-group">
                 <h5>Question 3: </h5>
                 <label for="question3">How likely are you to go outside on weekends?</label>
-                <select class="form-control" id="question3">
+                <select class="form-control question" id="question3">
                     <option>1 - Definitely not likely</option>
                     <option>2 - Not likely</option>
                     <option>3 - Meh</option>
@@ -71,7 +75,7 @@
             <div class="form-group">
                 <h5>Question 4: </h5>
                 <label for="question4">How often do you travel for fun?</label>
-                <select class="form-control" id="question4">
+                <select class="form-control question" id="question4">
                     <option>1 - Never</option>
                     <option>2 - Once per year</option>
                     <option>3 - 2-4 times per year</option>
@@ -83,7 +87,7 @@
             <div class="form-group">
                 <h5>Question 5: </h5>
                 <label for="question5">How often do you go out to see a concert?</label>
-                <select class="form-control" id="question5">
+                <select class="form-control question" id="question5">
                     <option>1 - Never</option>
                     <option>2 - Once per year</option>
                     <option>3 - 2-4 times per year</option>
@@ -96,7 +100,7 @@
             <div class="form-group">
                 <h5>Question 6: </h5>
                 <label for="question6">Once you've made plans with a friend, how often do you stay committed to those plans?</label>
-                <select class="form-control" id="question6">
+                <select class="form-control question" id="question6">
                     <option>1 - Almost Never</option>
                     <option>2 - Occasionally</option>
                     <option>3 - Sometimes</option>
@@ -108,7 +112,7 @@
             <div class="form-group">
                 <h5>Question 7: </h5>
                 <label for="question7">How much do you like dogs?</label>
-                <select class="form-control" id="question7">
+                <select class="form-control question" id="question7">
                     <option>1 - Not at all</option>
                     <option>2 - I can tolerate them</option>
                     <option>3 - Meh</option>
@@ -120,7 +124,7 @@
             <div class="form-group">
                 <h5>Question 8: </h5>
                 <label for="question8">How much do you like cats?</label>
-                <select class="form-control" id="question8">
+                <select class="form-control question" id="question8">
                     <option>1 - Not at all</option>
                     <option>2 - I can tolerate them</option>
                     <option>3 - Meh</option>
@@ -132,7 +136,7 @@
             <div class="form-group">
                 <h5>Question 9: </h5>
                 <label for="question9">How often do you go out for drinks?</label>
-                <select class="form-control" id="question9">
+                <select class="form-control question" id="question9">
                     <option>1 - Never</option>
                     <option>2 - Once per year</option>
                     <option>3 - Once per month</option>
@@ -144,7 +148,7 @@
             <div class="form-group">
                 <h5>Question 10: </h5>
                 <label for="question10">You like being the center of attention.</label>
-                <select class="form-control" id="question10">
+                <select class="form-control question" id="question10">
                     <option>1 - Strongly Disagree</option>
                     <option>2 - Disagree</option>
                     <option>3 - Meh</option>
@@ -155,6 +159,27 @@
 
             <button type="submit" class="btn btn-info" id="submitButton">Submit</button>
         </form>
+
+        <div class="modal fade" id="results-modal" tabindex="-1" role="dialog" aria-labelledby="results" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Your new best friend should be</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="match-name"></h2>
+                        <img id="match-img" src="https://goo.gl/images/UvEp2C" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script type="text/javascript">
@@ -178,16 +203,22 @@
                 ]
             };
             var currentURL = window.location.origin;
-            ;
-            $.post(currentURL + "/api/friends", newFriendData)
-                .then(function (data) {
-                    // console.log(data);
-                    $("#yourName").val("");
-                    $("#yourImage").val("");
-                    alert("added to friend list");
-                });
-        });
 
+            $.post(currentURL + "/api/friends", newFriendData, function (data) {
+                // reset name and image fields
+                $("#yourName").val("");
+                $("#yourImage").val("");
+                $(".question").val('default');
+
+                // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                $("#match-name").text(data.name);
+                $("#match-img").attr("src", data.photo);
+
+                // Show the modal with the best match
+                $("#results-modal").modal("toggle");
+
+            })
+        });
 
     </script>
 </body>

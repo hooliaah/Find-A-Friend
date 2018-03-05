@@ -159,7 +159,8 @@
 
     <script type="text/javascript">
     // get data entered from survey
-        $("#submitButton").on("click", function () {
+        $("#submitButton").on("click", function (event) {
+            event.preventDefault();
             var newFriendData = {
                 name: $("#yourName").val().trim(),
                 photo: $("#yourImage").val().trim(),
@@ -174,14 +175,18 @@
                 q9: $("#question9").val(),
                 q10: $("#question10").val(),
             };
-            console.log(newFriendData);
+            // console.log(newFriendData);
 
             var currentURL = window.location.origin;
-
-            $.post(currentURL + "/api/new", newFriendData, function(data) {
+            
+;
+            $.post(currentURL + "/api/new", newFriendData) 
+            .then(function(data) {
+                console.log(data);
                 $("#yourName").val("");
                 $("#yourImage").val("");
-            })
+                alert("added to friend list");
+            });
         });
 
 

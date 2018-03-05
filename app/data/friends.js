@@ -1,19 +1,69 @@
-// save app's data inside of app/data/friends.js as an array of objects. 
+// array of friends 
 
 var friendList = [
     {
         name: "Julie",
         photo: "https://goo.gl/images/jwQdhb",
-        q1: 1,
-        q2: 2,
-        q3: 3,
-        q4: 4,
-        q5: 5,
-        q6: 5,
-        q7: 5,
-        q8: 5,
-        q9: 5,
-        q10: 5
+        scores: [
+            1,
+            2,
+            3,
+            4,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+        ]
+    },
+    {
+        name: "Audrey",
+        photo: "https://goo.gl/images/cafyx5",
+        scores: [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+        ]
+    },
+    {
+        name: "Paul",
+        photo: "https://goo.gl/images/zPgDhE",
+        scores: [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+        ]
+    },
+    {
+        name: "Morgan",
+        photo: "https://goo.gl/images/A7Zaqv",
+        scores: [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            4,
+            3,
+            2,
+            1
+        ]
     }
 ];
 

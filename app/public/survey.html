@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Find-A-Friend</title>
+    <!-- Link to Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <!-- Link to jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-
+ <!-- Survey questions -->
     <div class="container">
         <div class="row">
             <div class="col-6-sm">
@@ -149,15 +153,13 @@
                 </select>
             </div>
 
-            <!-- <button type="submit" class="btn btn-info">Submit</button>
-    </form>
-</div> -->
-            <button type="submit" class="btn btn-info">Submit</button>
+            <button type="submit" class="btn btn-info" id="submitButton">Submit</button>
         </form>
     </div>
 
     <script type="text/javascript">
-        $(".submit").on("click", function () {
+    // get data entered from survey
+        $("#submitButton").on("click", function () {
             var newFriendData = {
                 name: $("#yourName").val().trim(),
                 photo: $("#yourImage").val().trim(),
@@ -173,6 +175,13 @@
                 q10: $("#question10").val(),
             };
             console.log(newFriendData);
+
+            var currentURL = window.location.origin;
+
+            $.post(currentURL + "/api/new", newFriendData, function(data) {
+                $("#yourName").val("");
+                $("#yourImage").val("");
+            })
         });
 
 
